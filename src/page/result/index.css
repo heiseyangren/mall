@@ -17,4 +17,6 @@
     margin: 0 5px;
     padding: 5px 10px;
     border: 1px solid #ccc;
+    text-decoration: none;
+    color: #666;
 }

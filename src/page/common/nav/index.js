@@ -19,24 +19,23 @@ var nav   = {
         });
         // 注册点击事件
         $('.js-register').click(function(){
-            window.location.href = './register.html';
+            window.location.href = './user-register.html';
         });
         // 推出点击事件
         $('.js-logout').click(function(){
             _user.logout(function(res){
               window.location.reload();  
             }, function(errMsg){
-                _mm.errTips(errMsg);
+                _mm.errorTips(errMsg);
             });
         });
     },
     // 读取用户信息
     loadUserInfo : function(){
         _user.checkLogin(function(res){
-           $('.user.not-login').hide().siblings('.user.login').show()
-             .find('username').text(res.username);  
+           $('.user.not-login').hide().siblings('.user.login').show().find('.usernameSee').text(res.username);  
         }, function(errMsg){
-            _mm.errTips(errMsg);
+            _mm.errorTips(errMsg);
         });
     },
     // 读取购物车数量
